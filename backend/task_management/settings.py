@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     # User Defined APPs
     "jwt_auth",
+    "task_tickets",
 ]
 
 MIDDLEWARE = [
