@@ -34,7 +34,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
 class UserProfileSerializer(serializers.ModelSerializer):
     def to_internal_value(self, data):
-
         data = super().to_internal_value(data)
         if self.instance:
             for field in self.Meta.create_only_fields:

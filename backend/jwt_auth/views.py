@@ -36,8 +36,7 @@ class UserProfileRetrieveUpdateView(generics.RetrieveUpdateAPIView):
 
     def patch(self, request):
         """
-        To Update User Firstname, Lastname, DOB, Email and Phone Number.
-        Niether Email nor Phone Number can be updated once verified
+        To Update User Firstname, Lastname, DOB, Email.
         """
         user_db_details = self.get_object()
         user_request_data = self.request.data

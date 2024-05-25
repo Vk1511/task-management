@@ -9,11 +9,9 @@ from .views import (
 )
 
 urlpatterns = [
-    path("user", UserProfileRetrieveUpdateView.as_view(), name="user"),
-    path("user/register", UserProfileRegistrationView.as_view(), name="register"),
-    path("user/login", TokenObtainPairView.as_view(), name="login"),
-    path("user/token/refresh", TokenRefreshView.as_view()),
-    path(
-        "user/change-password", UserChangePasswordView.as_view(), name="change_password"
-    ),
+    path("", UserProfileRetrieveUpdateView.as_view(), name="user"),
+    path("register", UserProfileRegistrationView.as_view(), name="register"),
+    path("login", TokenObtainPairView.as_view(), name="login"),
+    path("token/refresh", TokenRefreshView.as_view()),
+    path("change-password", UserChangePasswordView.as_view(), name="change_password"),
 ]
