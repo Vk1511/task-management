@@ -1,0 +1,17 @@
+.selected-task{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.drops{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment{
+    margin-bottom: 0.5rem;
+}
+
+.grey{
+    color: grey;
+}

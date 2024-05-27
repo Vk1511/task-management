@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { createBrowserRouter, Routes, Route } from "react-router-dom";
+import { AppRoutes } from "./config/Routes/AppRoutes";
+import Auth from "./Components/Auth/Auth";
+import Task from "./Components/Task/Task";
+import { PrivateRoute } from "./config/Routes/PrivateRoute";
+import { PublicRoute } from "./config/Routes/PublicRoute";
+
+const router = createBrowserRouter(AppRoutes);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={
+          <PublicRoute>
+            <Auth />
+          </PublicRoute>
+        }
+      />
+      <Route
+        exact
+        path="/task"
+        element={
+          <PrivateRoute>
+            <Task />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
+  // return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,0 +1,37 @@
+.total{
+    margin-left: 1rem;
+}
+.task-container {
+    /* padding: 0 1rem; */
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
+  grid-template-rows: 100%;
+  /* gap: 0 5%; */
+  grid-auto-flow: row;
+  grid-template-areas: "pending in-progress done preview";
+  /* height: 100%; */
+}
+
+.pending {
+  grid-area: pending;
+  margin-left: 1rem;
+  border-right: 1px solid rgb(241, 239, 239);
+}
+
+.in-progress {
+  grid-area: in-progress;
+  margin-left: 1rem;
+  border-right: 1px solid rgb(241, 239, 239);
+
+}
+
+.done {
+  grid-area: done;
+  margin-left: 1rem;
+  border-right: 1px solid rgb(241, 239, 239);
+}
+
+.preview {
+  grid-area: preview;
+  margin-left: 1rem;
+}
